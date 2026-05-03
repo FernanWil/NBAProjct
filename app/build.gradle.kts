@@ -40,9 +40,13 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.foundation)
+    val nav_version = "2.9.8"
+    val media3_version = "1.3.0"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.media3.common.ktx)
-    val media3_version = "1.3.0"
     implementation("androidx.media3:media3-exoplayer:$media3_version")
     implementation("androidx.media3:media3-ui:$media3_version")
     implementation("androidx.compose.material:material-icons-extended")
@@ -53,6 +57,9 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation("androidx.navigation:navigation-compose:\$nav_version")
+    implementation("io.coil-kt:coil-compose:2.7.0")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
